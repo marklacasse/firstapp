@@ -4,11 +4,33 @@ api:
   service_key: 38PRUFWWXANI9OGH
   user_name: agent_6119fcd6-5a74-48e8-aff8-092520138ef3@AcmeInc
 agent: 
+  logger: 
+    level: INFO
+    progname: Securiity_Foo
   service: 
     logger: 
       path: contrast_service.log
-      level: ERROR
+      level: DEBUG
     host: 127.0.0.1
     port: 30555
 application: 
-  name: FirstAppTest
+  name: first_rails_app
+  # ruby:
+
+    # Allow the agent to track frozen Objects returned by
+    # source methods. This configuration is on by default.
+    # track_frozen_sources: NEEDS_TO_BE_SET
+
+    # Allow the agent to track propagation through interpolated
+    # Strings. This configuration is on by default.
+    # interpolate: NEEDS_TO_BE_SET
+    # Set a comma-separated string of rake tasks
+    # in which to disable agent operation.
+    # disabled_agent_rake_tasks: about,assets:clean,assets:clobber,assets:environment,assets:precompile,assets:precompile:all,db:create,db:drop,db:migrate:status,db:rollback,db:schema:cache:clear,db:schema:cache:dump,db:schema:dump,db:schema:load,db:seed,db:setup,db:structure:dump,db:version,doc:app,log:clear,middleware,notes,notes:custom,rails:template,rails:update,routes,secret,spec,spec:features,spec:requests,spec:controllers,spec:helpers,spec:models,spec:views,spec:routing,spec:rcov,stats,test,test:all,test:all:db,test:recent,test:single,test:uncommitted,time:zones:all,tmp:clear,tmp:create,webpacker:compile
+
+server:
+  name: foo-server-1
+  # path: NEEDS_TO_BE_SET
+  # type: NEEDS_TO_BE_SET
+  # environment: development
+  # tags: NEEDS_TO_BE_SET
