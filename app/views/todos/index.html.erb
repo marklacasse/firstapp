@@ -1,0 +1,10 @@
+<h1> List of all Todos </h1>
+
+<table border="1" align="left">
+<% Todo.all.each do |i| %>
+  <tr>
+    <th align="left" ><%= i.name %></th>
+    <th align="left" ><%= i.description %></th>
+  </tr>
+<% end %>
+</table>
